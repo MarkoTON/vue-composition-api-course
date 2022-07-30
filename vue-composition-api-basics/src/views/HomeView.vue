@@ -16,8 +16,17 @@ import { ref } from 'vue'
 const counter = ref(0)
 
 const increaseCounter = () => {
+  console.log(counter)
+  console.log(counter.value)
   counter.value++
 }
+
+console.log(increaseCounter)
+console.log(increaseCounter())
+
+console.log('------------------')
+
+console.log(ref())
 
 const decreaseCounter = () => {
   counter.value--
