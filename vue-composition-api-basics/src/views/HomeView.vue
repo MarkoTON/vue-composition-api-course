@@ -28,16 +28,22 @@
   imports
 */
 
-  import { reactive, computed, watch, onMounted } from 'vue'
+  import { reactive, computed, watch, onMounted, onBeforeMount, onActivated, onDeactivated, onBeforeUpdate, onUpdated } from 'vue'
 
 /*
   app title
 */
 
+// There is not beforeCreate ond Create hooks!!!!!!!!!???????????
+
   const appTitle = 'My Ok Counter App'
 
   onMounted(() => {
-    console.log('Do stuff related to App Title')
+    console.log('Do stuff related to App Title: onMounted')
+  })
+
+  onBeforeMount(() => {
+    console.log('Do stuff related to App Title: onBeforeMount')
   })
 
 /*
@@ -69,7 +75,25 @@
   }
 
   onMounted(() => {
-    console.log('Do stuff related to Counter')
+    console.log('Do stuff related to Counter: onMounted')
+  })
+
+
+  // check onActivated and onDeactivated
+  onActivated(()=>{
+    console.log('onActivated')
+  })
+
+  onDeactivated(()=>{
+    console.log('onDeactivated')
+  })
+
+  onBeforeUpdate(()=>{
+    console.log('onBeforeUpdate')
+  })
+
+  onUpdated(()=>{
+    console.log('onUpdated')
   })
 
 </script>

@@ -3,8 +3,15 @@
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
   </nav>
-
-  <RouterView />
+  <!-- Proveriti router za vue 3 -->
+  <router-view v-slot="{ Component }">
+    <keep-alive>
+      <component :is="Component" />
+    </keep-alive>
+  </router-view>
+  <!-- <keep-alive>
+    <RouterView />
+  </keep-alive> -->
 </template>
 
 <style>
