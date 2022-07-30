@@ -3,6 +3,7 @@
     <h1>Modals</h1>
     <button @click="showModal = true">Show modal</button>
     <teleport to=".modals-container">
+    <!-- <teleport to="body"> -->
       <div
         v-if="showModal"
         class="modal"
@@ -33,6 +34,7 @@
 <style>
 .modal {
   background: beige;
+  /* content: 'Metallica'; */
   padding: 10px;
   position: absolute;
   left: 0;

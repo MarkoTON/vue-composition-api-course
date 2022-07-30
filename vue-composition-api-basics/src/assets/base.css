@@ -73,6 +73,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Moramo u base css da pozicioniramo gde ce biti modal */
 .modals-container {
   position: initial;
 }

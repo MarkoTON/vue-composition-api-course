@@ -38,10 +38,14 @@
   const appTitle = 'My Ok Counter App'
 
   const appTitleRef = ref(null)
+  console.log('-----------------------------')
+  console.log(appTitleRef)
+  console.log('-----------------------------')
 
   onMounted(() => {
     console.log(`The app title is ${ appTitleRef.value.offsetWidth } px wide!`)
   })
+
 
 /*
   counter
@@ -63,6 +67,7 @@
     return 'odd'
   })
 
+  // Obavezno provetiti nexTick!!!!!!
   const increaseCounter = async (amount, e) => {
     counterData.count += amount
     await nextTick()
