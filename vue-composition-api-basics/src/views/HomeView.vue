@@ -14,6 +14,7 @@
     <div class="edit">
       <h4>Edit counter title:</h4>
       <input v-model="counterData.title" type="text">
+      <!-- <input v-model="counterTitle" type="text"> -->
     </div>
 
   </div>
@@ -21,12 +22,15 @@
 
 <script setup>
 import { reactive } from 'vue'
+// import { ref } from 'vue'
 
+// Non reactive data
 const appTitle = 'My Ok Counter App'
 
 // const counter = ref(0),
 //       counterTitle = ref('My Counter')
 
+// Ne moramo da koristimo .value kada koristimo reactive objects
 const counterData = reactive({
   count: 0,
   title: 'My Counter'
@@ -39,6 +43,9 @@ const increaseCounter = () => {
 const decreaseCounter = () => {
   counterData.count--
 }
+
+console.log(reactive)
+console.log(counterData)
 </script>
 
 <style>
