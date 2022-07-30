@@ -33,7 +33,15 @@ const counterData = reactive({
   title: 'My Counter'
 })
 
-watch(() => counterData.count, (newCount) => {
+watch(() => counterData.count, (newCount, oldCount, k, t) => {
+  console.log(k())
+  console.log(t)
+  console.log(k)
+  console.log('----------------')
+  console.log('----------------')
+  console.log('Old count: ' + oldCount)
+  console.log('New count: ' + newCount)
+  console.log('Orginal count: ' + counterData.count)
   if (newCount === 20) {
     alert('Way to go! You made it to 20!!')
   }
@@ -45,6 +53,7 @@ const oddOrEven = computed(() => {
 })
 
 const increaseCounter = (amount, e) => {
+  // console.log(e)
   counterData.count += amount
 }
 
