@@ -2,7 +2,7 @@
   <div class="posts">
     <h1>Posts</h1>
 
-    <ul>
+    <ol>
       <li>
         <RouterLink to="/postDetail/id1">Post 1</RouterLink>
       </li>
@@ -12,7 +12,7 @@
       <li>
         <RouterLink to="/postDetail/id3">Post 3</RouterLink>
       </li>
-    </ul>
+    </ol>
 
     <textarea v-autofocus />
   </div>
