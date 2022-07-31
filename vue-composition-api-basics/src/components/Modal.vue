@@ -12,6 +12,13 @@
       <div>
         Username is: {{ userData.username }}
       </div>
+      <hr>
+      <h2>props:</h2> {{props}}
+      <br>
+      <h2>props.modelValue:</h2> {{props.modelValue}}
+      <br>
+      <h2>props.title:</h2> {{props.title}}
+      <h2>Just using 'title':</h2> {{title}}
     </div>
   </teleport>
 </template>
@@ -27,7 +34,9 @@
   props
 */
 
+  // Unutar script-e mora da se koristi props.title etc.
   const props = defineProps({
+    // v-model
     modelValue: {
       type: Boolean,
       default: false
