@@ -16,6 +16,7 @@
       :is="showDarkModals ? ModalDark : Modal"
       title="My modal title (via prop)"
     >
+      <h3 style="color:red"><u>This content is comming from 'component'. And it will go to Modal or ModalDark base on 'showDarkModals' condiotion!!</u></h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ipsa laboriosam vero natus ut rerum quaerat, saepe praesentium tempore et hic velit odio nemo minus labore quam ullam quod architecto?</p>
     </component>
   </div>

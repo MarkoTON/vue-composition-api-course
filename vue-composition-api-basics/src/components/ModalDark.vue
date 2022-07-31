@@ -5,7 +5,9 @@
       class="modal-dark"
     >
       <h1>{{ title }}</h1>
+      <!-- Here in this slot content is coming from '<component>' -->
       <slot />
+      <!-- End of slot -->
       <button @click="$emit('update:modelValue', false)">Hide modal</button>
     </div>
   </teleport>
