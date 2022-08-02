@@ -5,6 +5,7 @@ export const useCounterStore = defineStore({
   state: () => ({
     counter: 0
   }),
+  // like computed propertis
   getters: {
     doubleCount: (state) => state.counter * 2
   },
