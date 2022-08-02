@@ -21,6 +21,9 @@
       >
         {{ counterData.count }}
       </button>
+      <hr>
+      <h3>useCounter: </h3>
+      {{useCounter()}}
     </div>
   </div>
 </template>

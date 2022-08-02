@@ -7,7 +7,12 @@ const counterData = reactive({
 
 export function useCounter() {
 
-  watch(() => counterData.count, (newCount) => {
+  watch(() => counterData.count, (newCount, oldCount) => {
+    console.log('------------------')
+    console.log(oldCount)
+    console.log(newCount)
+    console.log('------------------')
+
     if (newCount === 20) {
       alert('Way to go! You made it to 20!!')
     }
