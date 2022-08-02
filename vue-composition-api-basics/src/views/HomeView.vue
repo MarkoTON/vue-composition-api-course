@@ -3,8 +3,12 @@
     
     <h2 ref="appTitleRef">{{ appTitle }}</h2>
 
-    <h3>{{ counter.title }}:</h3>
-
+    <h3>{{ counter.title }}: {{counter.count}}</h3>
+    <hr>
+    <h3>{{ counter.someRandomObj }}</h3>
+    <h3>Name: {{ counter.someRandomObj.name }}</h3>
+    <h3>Age: {{ counter.someRandomObj.age }}</h3>
+    <hr>
     <div>
       <button @click="counter.decreaseCounter(2)" class="btn">--</button>
       <button @click="counter.decreaseCounter(1)" class="btn">-</button>

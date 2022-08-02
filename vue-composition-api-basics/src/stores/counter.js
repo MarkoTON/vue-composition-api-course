@@ -4,7 +4,11 @@ export const useCounterStore = defineStore({
   id: 'counter',
   state: () => ({
     count: 0,
-    title: 'My Counter Title'
+    title: 'My Counter Title from Pinia',
+    someRandomObj: {
+      name: 'Marko',
+      age: 31
+    }
   }),
   actions: {
     increaseCounter(amount) {
