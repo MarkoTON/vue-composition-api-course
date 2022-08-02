@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore, acceptHMRUpdate  } from 'pinia'
 
 export const useCounterStore = defineStore({
   id: 'counter',
@@ -25,3 +25,8 @@ export const useCounterStore = defineStore({
     }
   }
 })
+
+// Neko ucitavanje 
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot))
+}
