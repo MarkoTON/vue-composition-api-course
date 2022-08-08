@@ -7,8 +7,9 @@
           <textarea
             v-model="newNote"
             class="textarea"
-            placeholder="Add a new note"
+            placeholder="Add a new note. PS: To go to next line presh SHIFT + ENTER"
             ref="newNoteRef"
+            @keydown.enter.exact.prevent="addNote"
           />
         </div>
       </div>
