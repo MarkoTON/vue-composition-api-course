@@ -10,6 +10,7 @@
             placeholder="Add a new note. PS: To go to next line presh SHIFT + ENTER"
             ref="newNoteRef"
             @keydown.enter.exact.prevent="addNote"
+            @keypress="valueLog"
           />
         </div>
       </div>
@@ -76,6 +77,13 @@
     notes.value.unshift(note)
     newNote.value = ''
     newNoteRef.value.focus()
+  }
+
+  function valueLog () {
+    console.log(newNote)
+    console.log(newNote.value)
+    console.log(newNoteRef)
+    console.log(newNoteRef.value)
   }
 
 /*
